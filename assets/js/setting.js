@@ -144,7 +144,7 @@ var PAR = {
 			$("#link3").text("视频已准备就绪，即将为您播放");
 			setTimeout(function() {
 				PAR.dp.play();
-				$("#loading-box").remove();
+				$("#my-loading", parent.document).remove();
 				PAR.jump.head();
 			}, 0);
 		},
@@ -210,6 +210,7 @@ var PAR = {
 			var cplayer =
 				`<div class="memory-play-wrap"><div class="memory-play"><span class="close">×</span><span>上次看到 </span><span>${PAR.ctime}</span><span class="play-jump">跳转播放</span></div></div>`
 			$(".yzmplayer-cplayer").append(cplayer);
+			$("#my-loading", parent.document).remove();
 			$(".close").on("click", function() {
 				$(".memory-play-wrap").remove();
 			});
@@ -518,6 +519,7 @@ var PAR = {
 					PAR.jump.head();
 				} else {
 					PAR.dp.notice("视频已准备就绪，即将为您播放");
+					$("#my-loading", parent.document).remove();
 					PAR.video.play()
 				}
 			}, 0);

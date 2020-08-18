@@ -317,13 +317,13 @@
 								callback: function() {
 									setTimeout(function() {
 										n.template.danmakuLoading.style.display = "none", setTimeout(function() {
-											document.getElementById('link2-success').style.display = "block"
+											document.getElementById('link2-success')
 										}, 1 * 1500), n.options.autoplay && n.play()
 									}, 0)
 								},
 								error: function(e) {
 									document.getElementById('link2-success').remove(), setTimeout(function() {
-										document.getElementById('link2-error').style.display = "block"
+										document.getElementById('link2-error')
 									}, 1 * 1000), n.notice(e)
 								},
 								apiBackend: this.options.apiBackend,
@@ -1320,7 +1320,7 @@
 					u = i.$each;
 				e.$value, e.$index;
 				return t +=
-					'<div id="loading-box" style="display:none;"><div class="loading"><p class="pic"></p><div class="tips"></div></div><div type="button" id="close"><div class="playlink"><span id="link1">播放器连接...</span><span id="link1-success">【完成】</span></div><div class="dmlink"><span id="link2">弹幕连接中...</span><span id="link2-success">【完成】</span><span id="link2-error">【失败】</span></div><span class="palycon" id="link3"><e id="link3_tip">等待视频连接中</e><e id="link3-error">【失败】</e><!--d class="wait"><e id="span">3</e>s</d--></span></div></div><div class="yzmplayer-mask"></div>\n<div class="yzmplayer-cplayer"><div class="yzmplayer-showing" style="height:58px"><svg aria-hidden="true"><use xlink:href="#icon-play"></use></svg></div><div class="vod-title"><div id="landing-title" class="video-info"><ul class="u-title"><a id="vodlink" href="" target="_blank" ><span class="iconfont icon-back"></span></a><a id="vodtitle"><span></span></a></ul></div></div></div><div class="yzmplayer-video-wrap">\n    ',
+					'<div id="loading-box" style="display:none;"><div class="loading"><div class="tips"></div></div><div type="button" id="close"><div class="playlink"><span id="link1">播放器连接...</span><span id="link1-success">【完成】</span></div><div class="dmlink"><span id="link2">弹幕连接中...</span><span id="link2-success">【完成】</span><span id="link2-error">【失败】</span></div><span class="palycon" id="link3"><e id="link3_tip">等待视频连接中</e><e id="link3-error">【失败】</e><!--d class="wait"><e id="span">3</e>s</d--></span></div></div><div class="yzmplayer-mask"></div>\n<div class="yzmplayer-cplayer"><div class="yzmplayer-showing" style="height:58px"><svg aria-hidden="true"><use xlink:href="#icon-play"></use></svg></div><div class="vod-title"><div id="landing-title" class="video-info"><ul class="u-title"><a id="vodlink" href="" target="_blank" ><span class="iconfont icon-back"></span></a><a id="vodtitle"><span></span></a></ul></div></div></div><div class="yzmplayer-video-wrap">\n    ',
 					function(e) {
 						t += e
 					}(n(4)(a)), t += "\n    ", o.logo && (t += '\n    <div class="yzmplayer-logo">\n        <img src="', t += s(o.logo),
