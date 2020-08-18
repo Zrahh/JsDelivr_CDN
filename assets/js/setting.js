@@ -211,6 +211,7 @@ var PAR = {
 				`<div class="memory-play-wrap"><div class="memory-play"><span class="close">×</span><span>上次看到 </span><span>${PAR.ctime}</span><span class="play-jump">跳转播放</span></div></div>`
 			$(".yzmplayer-cplayer").append(cplayer);
 			$("#my-loading", parent.document).remove();
+			PAR.dp.play();
 			$(".close").on("click", function() {
 				$(".memory-play-wrap").remove();
 			});
