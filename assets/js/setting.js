@@ -489,21 +489,50 @@ var PAR = {
 	'setCookie': function(c_name, value, expireHours) {
 		var exdate = new Date();
 		exdate.setHours(exdate.getHours() + expireHours);
-		document.cookie = c_name + "=" + escape(value) + ((expireHours === null) ? "" : ";expires=" + exdate.toGMTString());
+		
+		/** 判断是否支持window.sessionStorage如果支持就使用window.sessionStorage，避免cookie过长 */
+		if(window.sessionStorage) {
+		    window.sessionStorage.setItem('playtime',c_name + "=" + escape(value) + ((expireHours === null) ? "" : ";expires=" + exdate.toGMTString()));
+		}else{
+		    document.cookie = c_name + "=" + escape(value) + ((expireHours === null) ? "" : ";expires=" + exdate.toGMTString());
+		}
 	},
 	'getCookie': function(c_name) {
-		if (document.cookie.length > 0) {
-			c_start = document.cookie.indexOf(c_name + "=");
-			if (c_start !== -1) {
-				c_start = c_start + c_name.length + 1;
-				c_end = document.cookie.indexOf(";", c_start);
-				if (c_end === -1) {
-					c_end = document.cookie.length;
-				};
-				return unescape(document.cookie.substring(c_start, c_end));
-			}
-		}
+	    
+	    if(window.sessionStorage){
+	        
+	        var _session =  window.sessionStorage.getItem('playtime');
+	        
+	        if(_session && _session.length > 0){
+	            
+	            c_start = _session.indexOf(c_name + "=");
+    			if (c_start !== -1) {
+    				c_start = c_start + c_name.length + 1;
+    				c_end = _session.indexOf(";", c_start);
+    				if (c_end === -1) {
+    					c_end = _session.length;
+    				};
+    				return unescape(_session.substring(c_start, c_end));
+    			}
+	        }
+	        
+	    }else{
+	        
+	        if (document.cookie.length > 0) {
+    			c_start = document.cookie.indexOf(c_name + "=");
+    			if (c_start !== -1) {
+    				c_start = c_start + c_name.length + 1;
+    				c_end = document.cookie.indexOf(";", c_start);
+    				if (c_end === -1) {
+    					c_end = document.cookie.length;
+    				};
+    				return unescape(document.cookie.substring(c_start, c_end));
+    			}
+		    }
+	    }
+	    
 		return "";
+		
 	},
 	'formatTime': function(seconds) {
 		return [parseInt(seconds / 60 / 60), parseInt(seconds / 60 % 60), parseInt(seconds % 60)].join(":").replace(
