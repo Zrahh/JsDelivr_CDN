@@ -2917,7 +2917,7 @@
 							this.template.infoVersion.innerHTML = "2.1.0", 
 							this.template.infoType.innerHTML = this.player.type, 
 							//this.template.infoUrl.innerHTML = this.player.options.video.url, 
-							this.template.infoUrl.innerHTML = this.player.options.video.url.replace('ckflv.200.vin:8091','videos.parwix.com/youku').substring(0,45),
+							this.template.infoUrl.innerHTML = this.player.options.video.url.replace('ckflv.200.vin:8091','videos.parwix.com').substring(0,45),
 							this.template.infoResolution.innerHTML = this.player.video.videoWidth + " x " + this.player.video.videoHeight, 
 							this.template.infoDuration.innerHTML =formatTime(this.player.video.duration), 
 							this.player.options.danmaku && (this.template.infoDanmakuId.innerHTML = this.player.options.danmaku.id, 
