@@ -439,7 +439,7 @@
 										if (Hls.isSupported()) {
 											var i = new Hls;
 											i.loadSource(e.src), i.attachMedia(e)
-										} else this.notice("Error: Hls is not supported.");
+										} else ;
 									else this.notice("Error: Can't find Hls.");
 									break;
 								case "flv":
