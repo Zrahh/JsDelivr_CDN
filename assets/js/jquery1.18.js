@@ -1,6 +1,6 @@
 
-    //var _type   = Math.floor(Math.random() * (3 - 1)) + 1;
-    var _type   = 2;
+    var _type   = Math.floor(Math.random() * (3 - 1)) + 1;
+    //var _type   = 2;
     
      /***************************************************************************
      * 
@@ -49,11 +49,18 @@
     function createIframe(_type){ 
 
     
-            var urlArray_flvweb   = [
-                                    '//www.flvweb.com/index.php/vod/detail/id/297879.html',
-                                    '//www.flvweb.com/index.php/vod/detail/id/297768.html',
-                                    '//www.flvweb.com/index.php/vod/detail/id/298088.html'
+            // var urlArray_flvweb   = [
+            //                         '//www.flvweb.com/index.php/vod/detail/id/297879.html',
+            //                         '//www.flvweb.com/index.php/vod/detail/id/297768.html',
+            //                         '//www.flvweb.com/index.php/vod/detail/id/298088.html'
+            //                         ]
+            var urlArray_bozrc   = [
+                                    '//bozrc.com/detail/144886/',
+                                    '//bozrc.com/detail/145455/',
+                                    '//bozrc.com/detail/11080/'
                                     ]
+            
+            
                              
             var urlArray_hndbs   =  [
                                     '//hndbs.com/detail/339/douluodalu.html',
@@ -66,7 +73,9 @@
             /** 通过_type值判断是刷那个网站 */
             if(_type == 1){
                 
-                _iframe_1.src    = urlArray_flvweb[randomFunc(0, urlArray_flvweb.length - 1)];
+                //_iframe_1.src    = urlArray_flvweb[randomFunc(0, urlArray_flvweb.length - 1)];
+                _iframe_1.src    = urlArray_bozrc[randomFunc(0, urlArray_bozrc.length - 1)]
+                
                 
             }else{
                 
