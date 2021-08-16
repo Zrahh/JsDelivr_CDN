@@ -2670,12 +2670,12 @@ ul::-webkit-scrollbar-track {
 	-moz-animation: spinoffPulse .9s infinite linear;
 	-webkit-animation: unset;
 	background-size: 100%;
-	background-image: url(https://cdn.jsdelivr.net/gh/Fog-Forest/Picture-Bed/IMG/20200519224135.gif);
+	background-image: url();
 	top: 50%;
 	left: 50%;
 	height: 32px;
 	width: 32px;
-	background-image: url(https://cdn.jsdelivr.net/gh/Fog-Forest/Picture-Bed/IMG/20200519224236.png);
+	background-image: url();
 	-webkit-animation: vod_loading 1s steps(30) infinite;
 	width: 54px;
 	height: 20px;
@@ -2683,7 +2683,7 @@ ul::-webkit-scrollbar-track {
 	background-size: 54px 600px;
 	animation: vod_loading 1s steps(30) infinite;
 	opacity: 1;
-	background-image: url(https://cdn.jsdelivr.net/gh/Fog-Forest/Picture-Bed/IMG/20200524205221.png);
+	background-image: url();
 }
 
 .yzmplayer:-webkit-full-screen .yzmplayer-fulloff-icon {
@@ -2738,7 +2738,7 @@ ul::-webkit-scrollbar-track {
 }
 
 #gg {
-	background: url(https://cdn.jsdelivr.net/gh/Fog-Forest/Picture-Bed/IMG/20200519222902.jpg) no-repeat center;
+	background: url() no-repeat center;
 	background-size: contain;
 	width: 100%;
 	height: 100%;
@@ -2789,9 +2789,7 @@ ul::-webkit-scrollbar-track {
 }
 
 .loading .pic {
-	background: url(https://cdn.jsdelivr.net/gh/Fog-Forest/Picture-Bed/IMG/20200519223109.gif) no-repeat;
-	/* background: url(https://cdn.jsdelivr.net/gh/Fog-Forest/Picture-Bed/IMG/20200519223501.gif) no-repeat;
-	background-image: url(https://cdn.jsdelivr.net/gh/Fog-Forest/Picture-Bed/IMG/20200519224135.gif); */
+	background: url() no-repeat;
 	width: 80px;
 	height: 115px;
 	background-size: 100%;
